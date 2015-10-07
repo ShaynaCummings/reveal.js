@@ -1,0 +1,38 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #fff;
+$headingFont: 'Lato', sans-serif;
+$headingColor: #5db9d1;
+$headingLetterSpacing: -0.03em;
+$headingTextShadow: none;
+$backgroundColor: #282828;
+$linkColor: #5db9d1;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #282828;
+
+// Fix links so they are not cut off
+.reveal a {
+	line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #282828, #000000 );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
